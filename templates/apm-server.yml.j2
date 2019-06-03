@@ -1,0 +1,3 @@
+{% if elasticsearch_apm_server_custom_configuration %}
+{{ elasticsearch_apm_server_custom_configuration | to_nice_yaml }}
+{% endif %}

@@ -1,2 +1,13 @@
 ---
 # tasks
+- name: install APM server
+  apt:
+    deb: "{{elasticsearch_apm_server_download_url}}"
+
+- name: configure elasticsearch apm-server
+  template:
+    src: apm-server.yml.j2
+    dest: "{{ elasticsearch_apm_server_configurations_path }}"
+    mode: '0440'
+  notify:
+    - restart apm_server

@@ -1,2 +1,9 @@
 ---
-# defaults vars
+elasticsearch_apm_server_version: "7.1.1"
+elasticsearch_apm_server_download_url: "https://artifacts.elastic.co/downloads/apm-server/apm-server-{{elasticsearch_apm_server_version}}-amd64.deb"
+elasticsearch_apm_server_custom_configuration:
+  apm-server:
+    host: "localhost:8200"
+  output.elasticsearch:
+    hosts: ["localhost:9200"]
+elasticsearch_apm_server_configurations_path: "/etc/apm-server/apm-server.yml"

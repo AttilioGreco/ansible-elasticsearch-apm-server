@@ -1,2 +1,15 @@
 ---
-# handlers file
+- name: restart apm_server
+  service:
+    name: apm-server
+    state: restarted
+
+- name: reload apm_server
+  service:
+    name: apm-server
+    state: reloaded
+
+- name: stop apm_server
+  service:
+    name: apm-server
+    state: stopped
