@@ -1,0 +1,24 @@
+---
+package:
+  elasticsearch-apm-server:
+    installed: true
+port:
+  tcp:80:
+    listening: true
+    ip:
+      - 0.0.0.0
+service:
+  elasticsearch-apm-server:
+    enabled: true
+    running: true
+user:
+  elasticsearch-apm-server:
+    exists: true
+    groups:
+      - elasticsearch-apm-server
+group:
+  elasticsearch-apm-server:
+    exists: true
+process:
+  elasticsearch-apm-server:
+    running: true
